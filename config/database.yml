@@ -29,5 +29,5 @@ production:
   username: <%= Rails.application.credentials.dig(:aliyun_rds, :admin) %>
   password: <%= Rails.application.credentials.dig(:aliyun_rds, :password) %>
   host: <%= Rails.application.credentials.dig(:aliyun_rds, :host) %>
-  pool: 5
+  pool: 10
   reconnect: true
