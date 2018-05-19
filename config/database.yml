@@ -24,5 +24,10 @@ test:
 
 production:
   adapter: mysql2
-  encoding: utf8
   database: aliyun_upload_image
+  encoding: utf8
+  username: <%= Rails.application.credentials.dig(:aliyun_rds, :admin) %>
+  password: <%= Rails.application.credentials.dig(:aliyun_rds, :password) %>
+  host: <%= Rails.application.credentials.dig(:aliyun_rds, :host) %>
+  pool: 5
+  reconnect: true
