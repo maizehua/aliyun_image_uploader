@@ -3,6 +3,6 @@
   <%= render 'partials/notice' %>
 
   <% if @image&.file&.attachment.present? %>
-    <%= image_tag @image.file %>
+    <%= image_tag @image.file.variant(resize: "750x750") %>
   <% end %>
 </div>
