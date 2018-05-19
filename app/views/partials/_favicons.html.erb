@@ -1,0 +1,16 @@
+<% [57, 60, 72, 76, 114, 120, 144, 152, 180].each do |size| %>
+<%= favicon_link_tag "favicon/apple-icon-#{size}x#{size}.png",
+    rel: 'apple-icon', type: 'image/png', sizes: "#{size}x#{size}" %>
+<% end %>
+
+<% [36, 48, 72, 96, 144, 192].each do |size| %>
+<%= favicon_link_tag "favicon/android-icon-#{size}x#{size}.png",
+    rel: 'android-icon', type: 'image/png', sizes: "#{size}x#{size}" %>
+<% end %>
+
+<% [16, 32, 96].each do |size| %>
+<%= favicon_link_tag "favicon/favicon-#{size}x#{size}.png",
+    rel: 'icon', type: 'image/png', sizes: "#{size}x#{size}" %>
+<% end %>
+
+<%= favicon_link_tag 'favicon/favicon.ico', type: "image/x-icon" %>
