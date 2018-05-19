@@ -1,0 +1,10 @@
+<ul>
+<% @images.each do |image| %>
+  <% next unless image.file.attachment.present? %>
+  <li>
+    <%= image_tag image.file %>
+  </li>
+<% end %>
+</ul>
+
+<%= link_to 'Upload New Image', new_image_path %>

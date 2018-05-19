@@ -1,0 +1,7 @@
+<p id="notice"><%= notice %></p>
+
+<% if @image.file.attachment.present? %>
+  <%= image_tag @image.file.variant(resize: "400x400") %>
+<% else %>
+  cannot find this image
+<% end %>
