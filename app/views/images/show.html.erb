@@ -1,7 +1,8 @@
-<p id="notice"><%= notice %></p>
+<div class="container text-center">
 
-<% if @image.file.attachment.present? %>
-  <%= image_tag @image.file.variant(resize: "400x400") %>
-<% else %>
-  cannot find this image
-<% end %>
+  <%= render 'partials/notice' %>
+
+  <% if @image&.file&.attachment.present? %>
+    <%= image_tag @image.file %>
+  <% end %>
+</div>

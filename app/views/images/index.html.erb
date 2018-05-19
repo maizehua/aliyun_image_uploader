@@ -1,10 +1,15 @@
-<ul>
-<% @images.each do |image| %>
-  <% next unless image.file.attachment.present? %>
-  <li>
-    <%= image_tag image.file %>
-  </li>
-<% end %>
-</ul>
-
-<%= link_to 'Upload New Image', new_image_path %>
+<div class="container">
+  <div class="row">
+    <% @images.each do |image| %>
+      <% next unless image.file.attachment.present? %>
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+        <%= link_to image_path(:id => image.id) do %>
+          <%= image_tag image.file, class: 'list-item-img' %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  <div class="row mt-5">
+    <%= link_to 'Upload Image', new_image_path, class: 'btn btn-primary' %>
+  </div>
+</div>
