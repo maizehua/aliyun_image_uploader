@@ -1,24 +1,11 @@
-# README
+# Aliyun image uploader
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project implements uploading image file to Aliyun OSS, and have a page to list all the uploaded images.
 
-Things you may want to cover:
+This site is available at http://maizehua.com
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
 
-* ...
+Run `cap production deploy` on my local machine. Only I can deploy it since the deploy script needs my private key to ssh into the ECS instance.
+
