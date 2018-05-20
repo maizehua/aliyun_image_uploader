@@ -1,0 +1,35 @@
+.image-columns {
+  /* Prevent vertical gaps */
+  line-height: 0;
+
+  -webkit-column-count: 3;
+  -moz-column-count:    3;
+  column-count:         3;
+  -moz-column-gap:      8px;
+  -webkit-column-gap:   8px;
+  column-gap:           8px;
+}
+
+.image-columns img {
+  width: 100% !important;
+  height: auto !important;
+  margin-top: 8px;
+}
+
+/* Responsive layout - makes a two column-layout */
+@media screen and (max-width: 1000px) {
+  .image-columns {
+    -webkit-column-count: 2;
+    -moz-column-count:    2;
+    column-count:         2;
+  }
+}
+
+/* Responsive layout - one column */
+@media screen and (max-width: 700px) {
+  .image-columns {
+    -webkit-column-count: 1;
+    -moz-column-count:    1;
+    column-count:         1;
+  }
+}

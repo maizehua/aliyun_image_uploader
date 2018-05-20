@@ -1,12 +1,10 @@
 <div class="container">
-  <div class="row">
+  <div class="image-columns">
     <% @images.each do |image| %>
       <% next unless image.file.attachment.present? %>
-      <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
-        <%= link_to image_path(:id => image.id) do %>
-          <%= image_tag image.file.variant(resize: "750x750"), class: 'list-item-img' %>
-        <% end %>
-      </div>
+      <%= link_to image_path(:id => image.id) do %>
+        <%= image_tag image.file.variant(resize: "750x750"), class: 'list-item-img' %>
+      <% end %>
     <% end %>
   </div>
   <div class="row mt-5">
