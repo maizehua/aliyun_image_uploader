@@ -5,7 +5,7 @@ server '47.254.66.108', user: 'deploy', roles: [:web, :app, :db], primary: true
 set :application, "aliyun_image_uploader"
 set :repo_url, "git@github.com:maizehua/aliyun_image_uploader.git"
 set :puma_threads,    [4, 16]
-set :puma_workers,    1
+set :puma_workers,    2
 
 set :user,            'deploy'
 set :pty,             true
