@@ -6,8 +6,8 @@ This site is available at http://maizehua.com
 
 
 ## Development Environment
-ruby 2.5.1
-rails 5.2.0
+- ruby 2.5.1
+- rails 5.2.0
 
 ## Deployment instructions
 
