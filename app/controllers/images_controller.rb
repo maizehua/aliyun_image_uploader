@@ -2,10 +2,12 @@ class ImagesController < ApplicationController
 
   def index
     @images = Image.all
+    @index = true
   end
 
   def new
     @image = Image.new
+    @upload_image = true
   end
 
   def show
